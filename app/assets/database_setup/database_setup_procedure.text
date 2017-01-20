@@ -6,3 +6,9 @@ Choice.create(description: "If you want to take the risky route, go to DURWARD S
 Choice.create(description: "If you’d like to play it safe, go to BRICK LANE", next_story_id:3, story_id:1)
 Choice.create(description: "Follow the woman towards CHRIST CHURCH", next_story_id:4, story_id:2)
 Choice.create(description: "Follow the man towards THRAWL STREET", next_story_id:5, story_id:2)
+
+
+
+#### Database setup spreadsheet
+
+https://docs.google.com/spreadsheets/d/1ZMa7yBnMRvNXIyDNS4pzORksDFIJr4rxXNhjiE2lq2A/edit#gid=876762035
