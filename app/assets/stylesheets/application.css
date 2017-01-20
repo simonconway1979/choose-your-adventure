@@ -1,8 +1,9 @@
 body {
   font-family: "Helvetica", Sans-serif;
-  background-color: #033649;
+  background-color: #8c92ac;
   margin-left: 100px;
   background-image: url
+  color: white;
 }
 
 .story-description {
