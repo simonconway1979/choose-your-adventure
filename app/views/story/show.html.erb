@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +19,19 @@
       <% end %>
     </p>
   </div>
+=======
+<div id='story'>
+  <h2>#<%= @story.title %></h2>
+  <img src="<%= @story.image_url %>" alt="<%= @story.id %> picture" width="450" border="2">
+  <p class="story-description"><%= @story.description %></p>
+  <p><% @story.choices.each do |choice| %>
+      <form  method="get" action="/story/<%=choice.next_story_id%>">
+        <button class="btn-choices" type="submit"><%= choice.description %></button>
+      </form>
+    <% end %>
+  </p>
+</div>
+>>>>>>> 3c50b2ccae024f10c9157220cc1da8a58fa75ae5
 
   <script>
   $(document).ready(function() {
@@ -38,6 +52,28 @@
   target="_self"
   src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDQKXO9f-HxA4jXlT9n3oeicfffba4oM30&origin=<%=@story_location%>&destination=<%=@story_location%>&avoid=tolls|highways&mode=walking" allowfullscreen>
 </iframe>
+
+<div id='startLat'>Lat</div>
+<div id='startLon'>Lon</div>
+
+<script>
+  window.onload = function() {
+    var startPos;
+    var lat,lon;
+    var geoSuccess = function(position) {
+      startPos = position;
+      document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+      document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+      lat = startPos.coords.latitude
+      lon = startPos.coords.longitude
+      $.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=+40.714224,-73.961452&key=AIzaSyDQKXO9f-HxA4jXlT9n3oeicfffba4oM30", function (data) {
+          console.log(data);
+      });
+
+    };
+    navigator.geolocation.getCurrentPosition(geoSuccess);
+  };
+</script>
 
 
 <div id='arrived'>
