@@ -36,10 +36,17 @@
 <script>
   window.onload = function() {
     var startPos;
+    var lat,lon;
     var geoSuccess = function(position) {
       startPos = position;
       document.getElementById('startLat').innerHTML = startPos.coords.latitude;
       document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+      lat = startPos.coords.latitude
+      lon = startPos.coords.longitude
+      $.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=+40.714224,-73.961452&key=AIzaSyDQKXO9f-HxA4jXlT9n3oeicfffba4oM30", function (data) {
+          console.log(data);
+      });
+
     };
     navigator.geolocation.getCurrentPosition(geoSuccess);
   };
