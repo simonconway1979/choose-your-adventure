@@ -4,24 +4,39 @@ body {
   margin-left: 100px;
   margin-right: 100px;
   background-image: url;
-  width: 90%;
 }
 
-img {
-  width: 90%;
-}
-
-iframe {
-  margin-top: 50px;
-  width: 90%;
-  height: 550px;
+h1 {
+  font-size: 70px;
+  padding: 0;
+  margin: 0;
+  color: #C90E17;
+  text-align: center;
+  font-weight: normal;
+  font-family: 'Butcherman', cursive;
 }
 
 p {
   font-family: 'Droid Serif', serif;
-  line-height: 400%;
+  line-height: 170%;
   color: #fff;
 }
+
+img {
+  width: 100%;
+
+}
+
+.logo {
+  margin: auto;
+}
+
+iframe {
+  margin-top: 50px;
+  width: 100%;
+  height: 550px;
+}
+
 
 .story-description {
   width: 90%;
@@ -46,17 +61,6 @@ p {
 }
 
 
-h1 {
-  font-size: 150px;
-  padding: 0 10%;
-  margin: 0;
-  color: #C90E17;
-  text-align: centre;
-  font-weight: normal;
-  font-family: 'Butcherman', cursive;
-}
-
-
 .start {
     background-color: #4CAF50; /* Green */
     border: none;
@@ -74,7 +78,7 @@ h1 {
   margin-right: 10px;
 }
 #title-links-wrapper {
-  display: inline;
+  /*display: inline;*/
 }
 #title-sign-out {
   /*display: inline-block;*/
@@ -92,19 +96,14 @@ h1 {
   color: red;
 }
 
-#story {
-
-}
 
 a {
   font-size: 30px;
 }
 
-a:link{
-  color: #fff; text-decoration:none
-}
+a:link{ color: #fff; text-decoration:none }
 a:visited{ color: #fff; text-decoration:none }
-a:hover{ color: #666; text-decoration:none }
+a:hover{ color: #333333; text-decoration:none }
 a:active{ color: #fff; text-decoration:none }
 
 
@@ -123,8 +122,3 @@ a:active{ color: #fff; text-decoration:none }
  *= require_tree .
  *= require_self
  */
-
- body {
-  background-color: #033649;
-  font-family: 'Josefin Sans', sans-serif;
-}
